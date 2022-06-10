@@ -2,9 +2,15 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import AppColors from '../../constants/AppColors';
 
-function Button({Icon, marginRight, backgroundColor = AppColors.primary}) {
+function Button({
+  Icon,
+  onPress,
+  marginRight,
+  backgroundColor = AppColors.primary,
+}) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={[styles.button, marginRight && {marginRight}, {backgroundColor}]}>
       {Icon ? <Icon marginRight={10} /> : null}
       <Text style={styles.txt}>Directions on google maps</Text>

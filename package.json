@@ -6,10 +6,12 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "setup": "rm -rf ./node_modules; rm -rf ./ios/Pods; rm -rf ./ios/Podfile.lock; npm install; cd ios && pod install; cd ..",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/geolocation": "^2.1.0",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-maps": "^0.31.1",
